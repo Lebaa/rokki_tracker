@@ -73,6 +73,7 @@ while datetime.datetime.now().hour > 5 and datetime.datetime.now().hour < 18:
             sleep(120)
         else:
             print("Vitusti kamaa listalla, tyhjennetään")
+            played.clear()
             obj = Parser(nowPlaying)
             insert_biisi(obj.artist, obj.song, obj.timestamp)
             played.append(obj.song)
