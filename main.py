@@ -31,12 +31,12 @@ def db_command(command, variables):
     with sshtunnel.SSHTunnelForwarder(
         ("ssh.eu.pythonanywhere.com"),
         ssh_username="Leba",
-        ssh_password="Lebalol123",
+        ssh_password="*",
         remote_bind_address=("Leba.mysql.eu.pythonanywhere-services.com", 3306),
     ) as tunnel:
         connection = mysql.connect(
             user="Leba",
-            password="superpassu",
+            password="*",
             host="127.0.0.1",
             port=tunnel.local_bind_port,
             database="Leba$rokki",
